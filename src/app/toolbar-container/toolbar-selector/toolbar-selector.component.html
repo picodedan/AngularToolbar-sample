@@ -1,0 +1,15 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+<mat-menu #menu="matMenu">
+  <mat-button-toggle-group [multiple]="true" [vertical]="true" >
+    <mat-button-toggle
+      *ngFor="let tool of tools"
+      [value]="tool.id"
+      [checked]="tool.selected"
+      (change)="toggle.emit($event)">
+    {{tool.name}}
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-menu>
+

@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  /* grid-gap: 20px; */
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+
+}
+
+app-toolbar-selector {
+  display: flex;
+  /* max-width: 10%; */
+  flex-grow: .5;
+  justify-self: flex-end;
+  /* align-self: flex-start; */
+}
+
+.tool {
+  display: flex;
+  flex-grow: 2;
+  /* align-self: flex-startx */
+}

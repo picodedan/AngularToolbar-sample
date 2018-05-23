@@ -1,0 +1,18 @@
+<!-- workspace container -->
+<mat-card class="wrapper">
+  <!-- <mat-card-title>Workspace Container:</mat-card-title> -->
+  <app-toolbar-selector (toggle)="toggleVisibility($event)" [tools]="tools"></app-toolbar-selector>
+  <mat-card class="tool" *ngIf="tools[0].selected">
+    <app-sample-tool1></app-sample-tool1>
+  </mat-card>
+  <mat-card class="tool" *ngIf="tools[1].selected">
+    <app-sample-tool2></app-sample-tool2>
+  </mat-card>
+  <mat-card class="tool" *ngIf="tools[2].selected">
+    <app-sample-tool3></app-sample-tool3>
+  </mat-card>
+  <mat-card class="tool" *ngIf="tools[3].selected">
+    <app-sample-tool4></app-sample-tool4>
+  </mat-card>
+</mat-card>
+
