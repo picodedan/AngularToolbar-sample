@@ -1,12 +1,12 @@
 import { Tool } from './../shared';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar-container',
   templateUrl: './toolbar-container.component.html',
   styleUrls: ['./toolbar-container.component.css']
 })
-export class ToolbarContainerComponent implements OnInit {
+export class ToolbarContainerComponent {
   tools: Tool[] = [
     {id: 1, name: 'sample-tool1', selected: false },
     {id: 2, name: 'sample-tool2', selected: false },
@@ -15,9 +15,6 @@ export class ToolbarContainerComponent implements OnInit {
   ];
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   toggleVisibility(event) {
     console.log('Toggle event recieved: ', event);

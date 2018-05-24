@@ -1,5 +1,15 @@
 # ToolbarSample
 
+Sample of a reusable toolbar or toolbox component that will manage and render a set of 'tools' by way of a dropdown menu.  the menu tracks the state of which tools are currently open, and clicking the tool again hides it.  
+
+Future plans are:
+
+ --add in user state management, to render the component with any tools that were previously selected already displayed.
+ --add user cusomizable positioning in the workspace (vertical display of tools, left or right side of screen)
+ --build out tool components to hide icons as the viewport shrinks, adding them to a expanding menu or scrolling view. 
+ --display tools in order that they were selected(currently set to display in hard coded order)
+ 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
 ## Development server
