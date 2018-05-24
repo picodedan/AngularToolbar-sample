@@ -1,9 +1,13 @@
-<button mat-icon-button color="primary"[matMenuTriggerFor]="menu">
-    <mat-icon>arrow_drop_down</mat-icon>
-  </button>
+<button mat-icon-button color="primary"[matMenuTriggerFor]="menu"class="mat-small">
+  <strong>Tools</strong>
+  <mat-icon >arrow_drop_down</mat-icon>
+</button>
+
+<!-- <mat-divider></mat-divider> -->
+
 <mat-menu #menu="matMenu" [overlapTrigger]="false" >
   <span mat-menu-item *ngFor="let tool of tools">
-    <mat-checkbox [value]="tool.id" (change)="toggle.emit($event)" [checked]="tool.selected">
+    <mat-checkbox [value]="tool.id" (change)="toggle.emit($event)" [checked]="tool.selected" color="primary">
       {{tool.name}}
     </mat-checkbox>
   </span>

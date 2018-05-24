@@ -12,11 +12,10 @@ import { SampleTool4Component } from './tools/sample-tool4/sample-tool4.componen
 
 import { MatButtonModule,
   MatCheckboxModule,
-  MatSelectModule,
   MatCardModule,
   MatMenuModule,
-  MatButtonToggleModule,
-  MatIconModule
+  MatIconModule,
+  MatDividerModule
   } from '@angular/material';
 import { OverlayContainer } from '@angular/cdk/overlay';
 
@@ -34,12 +33,10 @@ import { OverlayContainer } from '@angular/cdk/overlay';
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatSelectModule,
-    MatMenuModule,
-    MatButtonToggleModule,
     MatMenuModule,
     MatIconModule,
     MatCheckboxModule,
+    MatDividerModule,
     MatButtonModule
   ],
   providers: [],
