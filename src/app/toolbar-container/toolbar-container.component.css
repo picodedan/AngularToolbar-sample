@@ -1,21 +1,29 @@
 .wrapper {
   display: flex;
-  /* grid-gap: 20px; */
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-
+  /* grid-gap: 5px; */
+  /* justify-content: flex-start; */
+  padding: .25rem;
+  /* grid-auto-columns: minmax(0,max-content); */
+  flex-flow: row wrap;
+  background-color: lightgrey;
 }
 
 app-toolbar-selector {
   display: flex;
-  /* max-width: 10%; */
-  flex-grow: .5;
-  justify-self: flex-end;
-  /* align-self: flex-start; */
+  min-width: 100%;
 }
 
+
 .tool {
-  display: flex;
-  flex-grow: 2;
-  /* align-self: flex-startx */
+  /* grid-row: 2; */
+  display: flex block;
+  /* box-sizing: border-box; */
+  max-width: 528px;
+  /* min-width: 10%; */
+  /* float: left; */
+  align-content: flex-start;
+  
+  /* display: flex; */
+  /* flex-grow: 2;
+  align-self: flex-start; */
 }

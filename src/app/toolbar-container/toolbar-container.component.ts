@@ -8,10 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ToolbarContainerComponent implements OnInit {
   tools: Tool[] = [
-    {id: 1, name: 'app-sample-tool1', selected: true },
-    {id: 2, name: 'sample-tool2', selected: true },
-    {id: 3, name: 'sample-tool3', selected: true },
-    {id: 4, name: 'sample-tool4', selected: true }
+    {id: 1, name: 'sample-tool1', selected: false },
+    {id: 2, name: 'sample-tool2', selected: false },
+    {id: 3, name: 'sample-tool3', selected: false },
+    {id: 4, name: 'sample-tool4', selected: false }
   ];
 
   constructor() { }
@@ -20,16 +20,11 @@ export class ToolbarContainerComponent implements OnInit {
   }
 
   toggleVisibility(event) {
-    // console.log('Toggle event recieved: ', event);
+    console.log('Toggle event recieved: ', event);
     const toolIndex = this.tools.findIndex((tool: Tool) => {
-      return tool.id === event.value;
+      return tool.id === event.source.value;
     });
-    const toggle = this.tools[toolIndex];
-    this.tools[toolIndex] = {
-      id: toggle.id,
-      name: toggle.name,
-      selected: !toggle.selected
-    };
+    this.tools[toolIndex] = Object.assign({}, this.tools[toolIndex], { selected: event.checked });
   }
 
 }

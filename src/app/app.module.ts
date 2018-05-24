@@ -18,6 +18,7 @@ import { MatButtonModule,
   MatButtonToggleModule,
   MatIconModule
   } from '@angular/material';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -37,9 +38,15 @@ import { MatButtonModule,
     MatMenuModule,
     MatButtonToggleModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatCheckboxModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(overlayContainer: OverlayContainer) {
+    overlayContainer.getContainerElement().classList.add('indigo-pink-theme');
+  }
+ }
