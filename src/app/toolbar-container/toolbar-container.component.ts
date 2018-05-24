@@ -17,7 +17,7 @@ export class ToolbarContainerComponent {
   constructor() { }
 
   toggleVisibility(event) {
-    console.log('Toggle event recieved: ', event);
+    // console.log('Toggle event recieved: ', event);
     const toolIndex = this.tools.findIndex((tool: Tool) => {
       return tool.id === event.source.value;
     });
